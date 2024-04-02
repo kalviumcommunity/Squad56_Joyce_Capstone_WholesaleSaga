@@ -18,7 +18,3 @@ The problem I observed was the lack of accessibility and convenience in the whol
 3. **Suppliers Contact:** Facilitate seamless communication and collaboration between buyers and suppliers, fostering strong partnerships and driving efficiency in wholesale transactions.
 
 4. **Bulk Purchase Option:** Provide users with the option to select bulk quantities of products directly from the product listing page or product details page
-
-
-
-
