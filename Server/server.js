@@ -1,6 +1,6 @@
 const express = require('express')
-require('dotenv').config()
-// port = 3000;
+dotenv.config()
+const port = process.env.PUBLIC_PORT || 3000;
 
 const app = express();
 //define a route
