@@ -1,20 +1,37 @@
-const express = require('express')
+const express = require('express');
+const connectToDB = require('../Server/config/db'); 
+const {HomeModel} =require("../Server/models/user")
 require('dotenv').config();
+
 const port = process.env.PUBLIC_PORT || 3000;
-
 const app = express();
-//define a route
-console.log('hello')
-app.get('/',(req,res)=>{
-    try{
-        res.send("Welcome to Joyce's capstone");
-    }
-    catch(err){
-        res.send(err)
-    }
-})
 
-//start server
-app.listen(process.env.PUBLIC_PORT,()=>{
-    console.log(`Server is running on port ${process.env.PUBLIC_PORT}`);
-})
+
+app.use(express.json()); 
+
+
+app.get('/', (req, res) => {
+    res.send("Welcome to Joyce's capstone");
+  });
+  
+  
+  app.get('/getHome', async(req, res) => {
+      try {
+          let data = await HomeModel.find()
+          console.log(data)
+          res.send(data)
+        } catch (error) {
+            res.send(error) 
+        }
+        
+    });
+    
+    connectToDB();
+    
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port}`);
+    });
+
+
+
+
