@@ -42,7 +42,7 @@ function Home(){
     <CImage className="caro" src={caro3} alt="slide 3" />
   </CCarouselItem>
 </CCarousel>
-        <div>
+        <div className="title1">
             <font className="shop-by-cat">Shop By Categories</font>
             <font className="premium-meat">Premium quality meats and much more</font>
         </div>

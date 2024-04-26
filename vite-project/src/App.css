@@ -101,31 +101,37 @@ button{
     background-color: rgb(90, 89, 89);
     margin-top: 300px;
 }
-.shop-by-cat{
+.shop-by-cat {
     font-family: "Inter", sans-serif;
     font-size: 35px;
     font-weight: 700;
-    margin-left: 90px;
-    margin-top: 35px;
-    position: absolute;
+    margin-left: 90px; 
+    margin-top: 35px; 
+    /* position: absolute;*/
+    display: flex; 
+    align-items: center; 
 }
-.premium-meat{
+
+.premium-meat {
     font-family: "Inter", sans-serif; 
     font-size: 20px;
-    margin-left: 92px;
-    margin-top: 90px;
-    position: absolute;
+    margin-left: 92px; 
+    margin-top: 10px; 
+    /* position: absolute;*/
+    display: flex; 
+    align-items: center; 
 }
+
 .grid{
-    margin-top: 170px;
+    margin-top: 95px;
 }
 .container {
     display: flex;
     flex-wrap: wrap;
     margin-top: 95px;
-    margin-left: 180px !important; 
+    margin-left: 160px !important; 
     gap: 100px;
-    width: 1240px !important;
+    width: 80% !important;
 }
 .image{
     width: 200px;
@@ -145,7 +151,7 @@ button{
 }
 .must{
     font-family: "Inter", sans-serif;
-    font-size: 35px;
+    font-size: 2.125rem;
     font-weight: 700;
     margin-left: 90px;
     margin-top: 70px;
