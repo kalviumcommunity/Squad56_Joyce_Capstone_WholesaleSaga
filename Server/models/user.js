@@ -3,5 +3,5 @@ const HomeSchema = new mongoose.Schema({
     img:String,
     category:String
 })
-const HomeModel =mongoose.model("whole_saga",HomeSchema)
+const HomeModel =mongoose.model("whole_sagas",HomeSchema)
 module.exports = HomeModel

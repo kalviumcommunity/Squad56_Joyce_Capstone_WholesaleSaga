@@ -14,16 +14,20 @@ app.get('/', (req, res) => {
     res.send("Welcome to Joyce's capstone");
   });
 
-  app.get('/getHome', async(req, res) => {
-    try {
-        let data = await HomeModel.find()
-        console.log(data)
-        res.send(data)
-      } catch (error) {
-          res.send(error) 
-      }
-      
-  });
+  app.get('/getHome', async (req, res) => {
+  try {
+    let data = await HomeModel.find();
+    if (data.length === 0) {
+      return res.status(404).send({ error: 'No data found' });
+    }
+    console.log(data);
+    res.send(data);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    res.status(500).send({ error: 'Internal server error' });
+  }
+});
+
     
     connectToDB();
 
