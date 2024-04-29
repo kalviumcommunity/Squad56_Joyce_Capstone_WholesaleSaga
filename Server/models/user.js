@@ -4,4 +4,4 @@ const HomeSchema = new mongoose.Schema({
     category:String
 })
 const HomeModel =mongoose.model("whole_sagas",HomeSchema)
-module.exports = HomeModel
+module.exports = {HomeModel}

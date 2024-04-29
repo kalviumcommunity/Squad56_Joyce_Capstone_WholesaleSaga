@@ -16,11 +16,11 @@ app.get('/', (req, res) => {
 
   app.get('/getHome', async (req, res) => {
   try {
-    let data = await HomeModel.find();
+    let data = await HomeModel.find({});
+    console.log(data);
     if (data.length === 0) {
       return res.status(404).send({ error: 'No data found' });
     }
-    console.log(data);
     res.send(data);
   } catch (error) {
     console.error('Error fetching data:', error);
