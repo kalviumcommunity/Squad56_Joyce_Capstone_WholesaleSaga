@@ -1,6 +1,6 @@
 const express = require('express');
 const connectToDB = require('../Server/config/db'); 
-const {HomeModel} =require("../Server/models/user")
+const HomeModel =require("../Server/models/user")
 require('dotenv').config();
 
 const port = process.env.PUBLIC_PORT || 3000;
@@ -16,11 +16,10 @@ app.get('/', (req, res) => {
 
   app.get('/getHome', async (req, res) => {
   try {
-    let data = await HomeModel.find();
+    let data = await HomeModel.find({});
     if (data.length === 0) {
       return res.status(404).send({ error: 'No data found' });
     }
-    console.log(data);
     res.send(data);
   } catch (error) {
     console.error('Error fetching data:', error);
