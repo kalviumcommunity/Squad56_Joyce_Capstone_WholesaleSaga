@@ -1,14 +1,14 @@
 # Squad56_Joyce_Capstone
 
 # Project:
-WholesaleSaga: Single window solution for all your wholesale needs 
+WholesaleSaga: Single window solution to meet all your meat needs 
 
 
 ## MISSION:
-To revolutionise the way businesses source their products. We aim to create a seamless platform where suppliers and buyers can connect effortlessly, facilitating a dynamic marketplace that fosters growth and success for all parties involved.
+At Wholesale Saga, our mission is to provide high-quality meats at wholesale prices, catering to both individual consumers and businesses looking to buy in bulk. We aim to revolutionise the meat industry by offering a convenient online platform where customers can access a wide variety of fresh, ethically sourced products, while also supporting local producers.
 
 ## PROBLEM:
-The problem I observed was the lack of accessibility and convenience in the wholesale market. As an individual looking to purchase goods in bulk for various purposes, I found it daunting to navigate through scattered suppliers and disparate platforms. This fragmented landscape often resulted in time-consuming searches, inconsistent product quality, and difficulties in negotiating prices. Recognizing the need for a user-friendly solution, I embarked on creating a wholesale market website.
+The inspiration behind creating Wholesale Saga stemmed from the frustrating difficulty of finding a reliable source for a diverse variety of meats conveniently. Wholesale Saga was born out of a desire to simplify the process of sourcing meats of exceptional quality, offering a one-stop online destination where customers can easily access a wide array of meats, all while ensuring freshness, reliability, and affordability. 
 
 ## FEATURES:
 1. **Order History:** Records all past orders made by users.
