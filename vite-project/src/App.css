@@ -142,12 +142,17 @@ button{
     display: flex;
     flex-direction: column;
 }
+.link{
+    text-decoration: none;
+}
 .Fname{
     font-family: "Inter", sans-serif;
     font-weight: bold;
     margin-top: 20px;
     /* margin-left: 75px; */
     text-align: center;
+    color: black;
+    
 }
 .must{
     font-family: "Inter", sans-serif;
@@ -291,3 +296,19 @@ hr{
 .twit{
     width: 35px;
 }
+.Badd{
+    width: 40px;
+    height: 35px;
+    background-color: rgba(182, 36, 106, 1);
+    border: none;
+    border-radius: 10px;
+    margin-top: 225px;
+    position: absolute;
+    margin-left: 360px;
+}
+.add{
+    width: 20px;
+    margin-bottom: 3px;
+   
+}
+
