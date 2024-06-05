@@ -13,8 +13,9 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.send("Welcome to Joyce's capstone");
   });
-  
-// I am raising a pr for my "GET API used" which is a redoassingment and this is the git api i did for this assingment
+
+// I am raising a pr for my "GET API used" which is a redoassingment as my previous get request was very basic and this is the git api i did for this assingment.
+
   app.get('/getHome', async (req, res) => {
   try {
     let data = await HomeModel.find({});
