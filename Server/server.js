@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
     res.status(500).send({ error: 'Internal server error' });
   }
 });
-// I am raising a pr for my "Updated bruno/API templates in application repo" which is a redo assingment as my PR didn't reflecting the API end points
+// I am raising a pr for my "Updated bruno/API templates in application repo" which is a redo assingment because PR didn't reflecting the API end points
     
     connectToDB();
 
