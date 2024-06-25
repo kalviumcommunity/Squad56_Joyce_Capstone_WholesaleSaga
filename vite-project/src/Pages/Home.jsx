@@ -25,7 +25,9 @@ import egg from "../assets/egg.jpg"
 import pickel from "../assets/pickel.webp"
 import spice from "../assets/spice.jpg"
 import dry from "../assets/dry-fish.jpg"
-import Footer from "../Components/Footer";
+import Footer from "../Components/Footer"
+import plus from "../assets/plus.png"
+import { Link } from "react-router-dom";
 
 function Home(){
     return(
@@ -48,58 +50,58 @@ function Home(){
         </div>
       <div className="grid">
         <div className="container">
-           <div className="item">
+        <Link  className="link" to='/Item'><div className="item">
                 <img className="image" src={elite} alt="!" />
                 <font className="Fname">Offers</font>
-            </div>
-            <div className="item">
+            </div></Link>
+            <Link  className="link" to='/Item'><div className="item">
                 <img className="image" src={party} alt="!" />
                 <font className="Fname">Party Pack</font>
-            </div>
-            <div className="item">
+            </div></Link>
+           <Link  className="link" to='/Item'> <div className="item">
                 <img className="image" src={chicken} alt="!" />
                 <font className="Fname">Chicken</font>
-            </div>  
-            <div className="item">
+            </div></Link> 
+            <Link  className="link" to='/Item'><div className="item">
                 <img className="image"src={mutton} alt="!" />
                 <font className="Fname">Mutton</font>
-            </div>
+            </div></Link>
         </div>
         <div className="container">
-            <div className="item">
+            <Link  className="link" to='/Item'><div className="item">
                 <img className="image" src={fish} alt="!" />
                 <font className="Fname">Sea Food</font>
-            </div>
-            <div className="item">
+            </div></Link>
+            <Link  className="link" to='/Item'><div className="item">
                 <img className="image" src={ready} alt="!" />
                 <font className="Fname">Ready To Cook</font>
-            </div>
-            <div className="item">
+            </div></Link>
+            <Link  className="link" to='/Item'><div className="item">
                 <img className="image" src={snack} alt="!" />
                 <font className="Fname">Snacks</font>
-            </div>  
-            <div className="item">
+            </div></Link>
+            <Link  className="link" to='/Item'><div className="item">
                 <img className="image" src={cold} alt="!" />
                 <font className="Fname">Cold Cuts</font>
-            </div>
+            </div></Link>
         </div>
         <div className="container">
-            <div className="item">
+        <Link  className="link" to='/Item'><div className="item">
                 <img className="image" src={egg} alt="!" />
                 <font className="Fname">Eggs</font>
-            </div>
-            <div className="item">
+            </div></Link>
+            <Link  className="link" to='/Item'><div className="item">
                 <img className="image" src={pickel} alt="!" />
                 <font className="Fname">Pickles</font>
-            </div>
-            <div className="item">
+            </div></Link>
+            <Link  className="link" to='/Item'><div className="item">
                 <img className="image" src={spice} alt="!" />
                 <font className="Fname">Spices</font>
-            </div>  
-            <div className="item">
+            </div></Link>
+            <Link  className="link" to='/Item'><div className="item">
                 <img className="image" src={dry} alt="!" />
                 <font className="Fname">Dry Fish</font>
-            </div>
+            </div></Link>
         </div>
     </div>
     <div>
@@ -110,25 +112,25 @@ function Home(){
                 <img className="Gimage" src={gallery1} alt="!" />
                 <font className="Gname">Chicken Curry Cut - Small Pieces</font>
                 <font className="Gweight">500g</font>
-                <font className="Gpieces">| 12-18 Pieces |</font>
-                <font className="Gserves">Serves 4</font>
+                <font className="Gpieces">| 12-18 Pieces | Serves 4</font>
                 <font className="price">₹159</font>
+                <button className="Badd"><img  className="add" src={plus} alt="!"/></button>
             </div>
             <div className="Gitem">
                 <img className="Gimage" src={gallery2} alt="!" />
                 <font className="Gname">CPrawns Medium - Deshelled</font>
                 <font className="Gweight">500g</font>
-                <font className="Gpieces">| 20-30 Pieces |</font>
-                <font className="Gserves">Serves 4</font>
+                <font className="Gpieces">| 20-30 Pieces | Serves 4</font>
                 <font className="price">₹379</font>
+                <button className="Badd"><img  className="add" src={plus} alt="!"/></button>
             </div>
             <div className="Gitem">
                 <img className="Gimage" src={gallery3} alt="!" />
                 <font className="Gname">Sardine - Mathi</font>
                 <font className="Gweight">500g</font>
-                <font className="Gpieces">| 12-18 Pieces |</font>
-                <font className="Gserves">Serves 4</font>
+                <font className="Gpieces">| 12-18 Pieces | Serves 4</font>
                 <font className="price">₹149</font>
+                <button className="Badd"><img  className="add" src={plus} alt="!"/></button>
             </div>  
         </div>
        <Footer/>
