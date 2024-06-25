@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.catName{
+    height: 200px;
+    background-color: rgba(217, 217, 217, 1);
+    font-family: "Inter", sans-serif;
+    color: rgba(182, 36, 106, 1);
+    font-weight: bold;
+    font-size: 85px;
+    padding-left: 35px;
+    padding-top: 32px;
+}
+.catImage{
+    width: 380px;
+    height: 236px;
+}
+.catContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    margin-left: 105px !important; 
+    gap: 50px;
+    margin-bottom: 85px;
+    /* width: 80% !important; */
+}
+.catItem{
+    display: flex;
+    flex-direction: column;
+}
+.catFname{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-left: 10px;
+    color: black;
+    
+}
+.catWeight{
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    word-wrap: wrap;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.catPieces{
+    position: absolute;
+    margin-top: 282px;
+    margin-left: 55px;
+    font-weight: lighter;
+}
+.catPrice{
+    margin-top: 10px;
+    margin-left: 10px ;
+}
