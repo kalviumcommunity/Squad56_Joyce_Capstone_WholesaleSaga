@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../Components/Navbar";
 // import { CCarouselCaption } from '@coreui/react'
@@ -30,6 +30,17 @@ import plus from "../assets/plus.png"
 import { Link } from "react-router-dom";
 
 function Home(){
+    const [cates,setCates] = useState([]);
+
+    useEffect(()=>{
+        axios.get('https://squad56-joyce-capstone-wholesalesaga-1.onrender.com/getHome')
+          .then(response =>{
+            setCates(response.data);
+          })
+          .catch(error=>{
+            console.log("Error",error)
+          });
+    },[]);
     return(
         <>
         <Navbar/>
@@ -49,24 +60,30 @@ function Home(){
             <font className="premium-meat">Premium quality meats and much more</font>
         </div>
       <div className="grid">
+
+
+      {cates.map(cate=>(
         <div className="container">
-        <Link  className="link" to='/Item'><div className="item">
-                <img className="image" src={elite} alt="!" />
-                <font className="Fname">Offers</font>
+        <Link  className="link" to='/Item' key={cate._id}><div className="item">
+                <img className="image" src={cate.img} alt="!" />
+                <font className="Fname">{cate.category}</font>
             </div></Link>
-            <Link  className="link" to='/Item'><div className="item">
-                <img className="image" src={party} alt="!" />
-                <font className="Fname">Party Pack</font>
+            <Link  className="link" to='/Item' key={cate._id}><div className="item">
+                <img className="image" src={cate.img} alt="!" />
+                <font className="Fname">{cate.category}</font>
             </div></Link>
-           <Link  className="link" to='/Item'> <div className="item">
-                <img className="image" src={chicken} alt="!" />
-                <font className="Fname">Chicken</font>
+           <Link  className="link" to='/Item' key={cate._id}> <div className="item">
+                <img className="image" src={cate.img} alt="!" />
+                <font className="Fname">{cate.category}</font>
             </div></Link> 
-            <Link  className="link" to='/Item'><div className="item">
-                <img className="image"src={mutton} alt="!" />
-                <font className="Fname">Mutton</font>
+            <Link  className="link" to='/Item' key={cate._id}><div className="item">
+                <img className="image"src={cate.img} alt="!" />
+                <font className="Fname">{cate.category}</font>
             </div></Link>
         </div>
+               )) }
+
+               
         <div className="container">
             <Link  className="link" to='/Item'><div className="item">
                 <img className="image" src={fish} alt="!" />
