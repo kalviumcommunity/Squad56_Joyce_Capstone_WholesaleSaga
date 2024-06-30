@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const connectToDB = require('../Server/config/db'); 
 const HomeModel =require("../Server/models/user")
 require('dotenv').config();
@@ -6,7 +7,7 @@ require('dotenv').config();
 const port = process.env.PUBLIC_PORT || 3000;
 const app = express();
 
-
+app.use(cors())
 app.use(express.json()); 
 
 
