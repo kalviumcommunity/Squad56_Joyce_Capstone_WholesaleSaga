@@ -69,7 +69,7 @@ function Home() {
 
 
 
-        <div className="container">
+        {/* <div className="container">
           <Link className="link" to='/Item'>
             <div className="item">
               <img className="image" src={fish} alt="!" />
@@ -94,8 +94,8 @@ function Home() {
               <font className="Fname">Cold Cuts</font>
             </div>
           </Link>
-        </div>
-        <div className="container">
+        </div> */}
+        {/* <div className="container">
           <Link className="link" to='/Item'>
             <div className="item">
               <img className="image" src={egg} alt="!" />
@@ -120,7 +120,7 @@ function Home() {
               <font className="Fname">Dry Fish</font>
             </div>
           </Link>
-        </div>
+        </div> */}
       </div>
       <div>
         <font className="must">Must Try</font>
