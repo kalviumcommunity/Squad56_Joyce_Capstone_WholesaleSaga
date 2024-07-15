@@ -30,7 +30,8 @@ app.get('/', (req, res) => {
   }
 });
 // I am raising a pr for my "Updated bruno/API templates in application repo" which is a redo assingment because PR didn't reflecting the API end points
-    
+   
+
     connectToDB();
 // I am raising a pr for my "Database read and write performed" which is a redo assingment as I got a review that "The PR does NOT fully meet the purpose as it only partially implements the required database call in the API route."
     app.listen(port, () => {
