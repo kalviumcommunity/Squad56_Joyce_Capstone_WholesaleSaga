@@ -45,7 +45,6 @@ app.get('/', (req, res) => {
     }
   });
 
-
     connectToDB();
 // I am raising a pr for my "Database read and write performed" which is a redo assingment as I got a review that "The PR does NOT fully meet the purpose as it only partially implements the required database call in the API route."
     app.listen(port, () => {
