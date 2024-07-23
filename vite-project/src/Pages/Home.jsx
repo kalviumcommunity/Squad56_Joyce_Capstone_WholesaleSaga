@@ -79,7 +79,7 @@ function Home() {
               <font className="Fname">Offers</font>
             </div>
           </Link>
-          <Link className="link" to='/Item'>
+          <Link className="link" to='/Party'>
             <div className="item">
               <img className="image" src={party} alt="!" />
               <font className="Fname">Party Pack</font>
@@ -91,7 +91,7 @@ function Home() {
               <font className="Fname">Chicken</font>
             </div>
           </Link>
-          <Link className="link" to='/Item'>
+          <Link className="link" to='/Mutton'>
             <div className="item">
               <img className="image" src={mutton} alt="!" />
               <font className="Fname">Mutton</font>
