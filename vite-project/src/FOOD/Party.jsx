@@ -7,12 +7,12 @@ import liver from "../assets/liver.jpg"
 import plus from "../assets/plus.png"
 
 
-function Mutton(){
+function Party(){
 
     const [item, setItem] = useState([]);
 
     useEffect(() => {
-      axios.get('https://squad56-joyce-capstone-wholesalesaga-1.onrender.com/getMut')
+      axios.get('https://squad56-joyce-capstone-wholesalesaga-1.onrender.com/getParty')
         .then(response => {
           setItem(response.data);
         })
@@ -135,4 +135,4 @@ function Mutton(){
         </>
     )
 }
-export default Mutton;
+export default Party;

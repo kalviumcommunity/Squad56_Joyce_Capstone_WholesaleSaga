@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const connectToDB = require('../Server/config/db'); 
-const {HomeModel,CatModel, CatMutton} =require("../Server/models/user")
+const {CatModel, CatMutton, CatParty} =require("../Server/models/user")
 require('dotenv').config();
 
 const port = process.env.PUBLIC_PORT || 3000;
@@ -61,6 +61,18 @@ app.get('/', (req, res) => {
     }
   });
 
+  app.get("/getParty",async(req,res)=>{
+    try{
+      let data=await CatParty.find({});
+      if(data.length===0){
+        return res.status(404).send({ error: 'No data found' });
+      }
+      res.send(data);
+    }catch(error){
+      console.error('Error fetching data:', error);
+      res.status(500).send({ error: 'Internal server error' });
+    }
+  });
 
     connectToDB();
 // I am raising a pr for my "Database read and write performed" which is a redo assingment as I got a review that "The PR does NOT fully meet the purpose as it only partially implements the required database call in the API route."
