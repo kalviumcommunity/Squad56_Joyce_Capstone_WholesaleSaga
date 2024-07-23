@@ -6,6 +6,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import caro1 from "../assets/caro1.jpg";
 import caro2 from "../assets/caro2.jpg";
 import caro3 from "../assets/caro3.jpg";
+import offer from "../assets/eliteOffers.jpg";
+import party from "../assets/PartyPack.jpg";
+import chicken from "../assets/chicken.webp";
+import mutton from "../assets/mutton.webp";
 import fish from "../assets/fish.jpg";
 import ready from "../assets/ready-to-cook.webp";
 import snack from "../assets/snack.webp";
@@ -22,17 +26,17 @@ import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const [cates, setCates] = useState([]);
+  // const [cates, setCates] = useState([]);
 
-  useEffect(() => {
-    axios.get('https://squad56-joyce-capstone-wholesalesaga-1.onrender.com/getHome')
-      .then(response => {
-        setCates(response.data);
-      })
-      .catch(error => {
-        console.log("Error", error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios.get('https://squad56-joyce-capstone-wholesalesaga-1.onrender.com/getHome')
+  //     .then(response => {
+  //       setCates(response.data);
+  //     })
+  //     .catch(error => {
+  //       console.log("Error", error);
+  //     });
+  // }, []);
 
   return (
     <>
@@ -56,20 +60,45 @@ function Home() {
 
 
         
-        <div className="container">
+        {/* <div className="container">
           {cates.map(user => (
             <Link className="link" to='/Item' key={user._id}>
-              <div className="item">
+              <div className="item" key={user._id}>
                 <img className="image" src={user.img} alt="!" />
                 <font className="Fname">{user.category}</font>
               </div>
             </Link>
           ))}
+        </div> */}
+
+
+<div className="container">
+          <Link className="link" to='/Item'>
+            <div className="item">
+              <img className="image" src={offer} alt="!" />
+              <font className="Fname">Offers</font>
+            </div>
+          </Link>
+          <Link className="link" to='/Item'>
+            <div className="item">
+              <img className="image" src={party} alt="!" />
+              <font className="Fname">Party Pack</font>
+            </div>
+          </Link>
+          <Link className="link" to='/Item'>
+            <div className="item">
+              <img className="image" src={chicken} alt="!" />
+              <font className="Fname">Chicken</font>
+            </div>
+          </Link>
+          <Link className="link" to='/Item'>
+            <div className="item">
+              <img className="image" src={mutton} alt="!" />
+              <font className="Fname">Mutton</font>
+            </div>
+          </Link>
         </div>
-
-
-
-        {/* <div className="container">
+        <div className="container">
           <Link className="link" to='/Item'>
             <div className="item">
               <img className="image" src={fish} alt="!" />
@@ -94,8 +123,8 @@ function Home() {
               <font className="Fname">Cold Cuts</font>
             </div>
           </Link>
-        </div> */}
-        {/* <div className="container">
+        </div>
+        <div className="container">
           <Link className="link" to='/Item'>
             <div className="item">
               <img className="image" src={egg} alt="!" />
@@ -120,7 +149,7 @@ function Home() {
               <font className="Fname">Dry Fish</font>
             </div>
           </Link>
-        </div> */}
+        </div>
       </div>
       <div>
         <font className="must">Must Try</font>

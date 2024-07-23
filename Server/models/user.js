@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const HomeSchema = new mongoose.Schema({
-    img:String,
-    category:String
-})
+// const HomeSchema = new mongoose.Schema({
+//     img:String,
+//     category:String
+// })
 
 const CatSchema = new mongoose.Schema({
     img:String,
@@ -13,9 +13,10 @@ const CatSchema = new mongoose.Schema({
 })
 
 
-const HomeModel =mongoose.model("whole_sagas",HomeSchema)
+// const HomeModel =mongoose.model("whole_sagas",HomeSchema)
 const CatModel =mongoose.model("chickens",CatSchema)
-module.exports = {HomeModel,CatModel}
+const CatMutton =mongoose.model("mutton",CatSchema)
+module.exports = {CatModel,CatMutton}
 
 // module.exports= CatModel
 // I am raising a pr for my "Database schema created" which is a redo assingment as The added lines in the code did not include the implementation of creating Mongoose models along with schema.
