@@ -47,6 +47,7 @@ app.get('/', (req, res) => {
   });
 
 
+
   app.get("/getMut",async(req,res)=>{
     try{
       let data=await CatMutton.find({});
@@ -59,6 +60,7 @@ app.get('/', (req, res) => {
       res.status(500).send({ error: 'Internal server error' });
     }
   });
+
 
     connectToDB();
 // I am raising a pr for my "Database read and write performed" which is a redo assingment as I got a review that "The PR does NOT fully meet the purpose as it only partially implements the required database call in the API route."
