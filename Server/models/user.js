@@ -34,7 +34,7 @@ const PartySchema = new mongoose.Schema({
 // const HomeModel =mongoose.model("whole_sagas",HomeSchema)
 const CatModel =mongoose.model("chickens",CatSchema)
 const CatMutton =mongoose.model("muttons",MuttSchema)
-const CatParty =mongoose.model("party",PartySchema)
+const CatParty =mongoose.model("parties",PartySchema)
 module.exports = {CatModel,CatMutton,CatParty}
 
 // module.exports= CatModel

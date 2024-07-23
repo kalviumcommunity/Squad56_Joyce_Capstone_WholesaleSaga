@@ -26,7 +26,7 @@ function Party(){
     return(
         <>
         <Navbar/>
-        <div className="catName">MUTTON</div>
+        <div className="catName">PARTY PACKS</div>
 
         <div className="catContainer">
             {item.map(user=>(
