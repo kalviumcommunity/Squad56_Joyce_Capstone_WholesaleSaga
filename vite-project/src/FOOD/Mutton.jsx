@@ -7,12 +7,12 @@ import liver from "../assets/liver.jpg"
 import plus from "../assets/plus.png"
 
 
-function Item(){
+function Mutton(){
 
     const [item, setItem] = useState([]);
 
     useEffect(() => {
-      axios.get('https://squad56-joyce-capstone-wholesalesaga-1.onrender.com/getCat')
+      axios.get('https://squad56-joyce-capstone-wholesalesaga-1.onrender.com/getMut')
         .then(response => {
           setItem(response.data);
         })
@@ -36,6 +36,7 @@ function Item(){
                     <font className="catWeight">{user.weight}</font>
                     <font className="catPieces">{user.serve}</font>
                     <font className="catPrice">{user.price}</font>
+                    <button className="Badd"><img  className="add" src={plus} alt="!"/></button>
                 </div>
             ))}
         </div>
@@ -134,4 +135,4 @@ function Item(){
         </>
     )
 }
-export default Item;
+export default Mutton;
