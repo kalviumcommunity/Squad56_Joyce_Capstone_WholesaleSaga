@@ -3,7 +3,21 @@ const HomeSchema = new mongoose.Schema({
     img:String,
     category:String
 })
+
+const CatSchema = new mongoose.Schema({
+    img:String,
+    name:String,
+    weight:String,
+    serve:String,
+    price:String
+})
+
+
 const HomeModel =mongoose.model("whole_sagas",HomeSchema)
-module.exports = HomeModel
+const CatModel =mongoose.model("chickens",CatSchema)
+module.exports = {HomeModel,CatModel}
+
+// module.exports= CatModel
 // I am raising a pr for my "Database schema created" which is a redo assingment as The added lines in the code did not include the implementation of creating Mongoose models along with schema.
+
 
