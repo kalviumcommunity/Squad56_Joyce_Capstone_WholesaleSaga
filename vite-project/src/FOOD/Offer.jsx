@@ -24,7 +24,7 @@ function Offer(){
         <div className="catName">OFFERS</div>
 
         <div className="catContainer">
-            {item.map(user=>{
+            {item.map(user=>(
                 <div className="catItem">
                 <img className="catImage" src={user.img} alt="!"/>
                 <font className="catFname">{user.name}</font>
@@ -33,7 +33,7 @@ function Offer(){
                 <font className="catPrice">{user.price}</font>
                 <button className="Badd"><img  className="add" src={plus} alt="!"/></button>
                 </div>
-            })}
+            ))}
         </div>
         <Footer/>
         </>
