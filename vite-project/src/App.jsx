@@ -6,6 +6,7 @@ import Mutton from './FOOD/Mutton';
 import {BrowserRouter,Routes,Route} from "react-router-dom"; 
 import Home from './Pages/Home';
 import Party from './FOOD/Party';
+import Offer from './FOOD/Offer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/Item' element={<Item/>}></Route>
         <Route path='/Mutton' element={<Mutton/>}></Route>
         <Route path='/Party' element={<Party/>}></Route>
+        <Route path='/Offer' elemnet={<Offer/>}></Route>
       </Routes>
      </BrowserRouter>
     </>
