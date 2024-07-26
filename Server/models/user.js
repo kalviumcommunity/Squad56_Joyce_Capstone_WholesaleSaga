@@ -43,7 +43,7 @@ const OfferSchema = new mongoose.Schema({
 const CatModel =mongoose.model("chickens",CatSchema)
 const CatMutton =mongoose.model("muttons",MuttSchema)
 const CatParty =mongoose.model("parties",PartySchema)
-const CatOffer =mongoose.model("offer",OfferSchema)
+const CatOffer =mongoose.model("offers",OfferSchema)
 module.exports = {CatModel,CatMutton,CatParty,CatOffer}
 
 // module.exports= CatModel
