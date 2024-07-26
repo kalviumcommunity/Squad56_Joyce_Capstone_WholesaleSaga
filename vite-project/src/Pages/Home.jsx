@@ -73,7 +73,7 @@ function Home() {
 
 
 <div className="container">
-          <Link className="link" to='/Item'>
+          <Link className="link" to='/Offer'>
             <div className="item">
               <img className="image" src={offer} alt="!" />
               <font className="Fname">Offers</font>
