@@ -46,12 +46,14 @@ const SeafoodSchema = new mongoose.Schema({
 
 
 
+
 // const HomeModel =mongoose.model("whole_sagas",HomeSchema)
 const CatModel =mongoose.model("chickens",CatSchema)
 const CatMutton =mongoose.model("muttons",MuttSchema)
 const CatParty =mongoose.model("parties",PartySchema)
 const CatOffer =mongoose.model("offers",OfferSchema)
 const CatSeafood =mongoose.model("sea_foods",SeafoodSchema)
+const Signup=mongoose.model("signup",SignupSchema)
 module.exports = {CatModel,CatMutton,CatParty,CatOffer,CatSeafood}
 
 // module.exports= CatModel
