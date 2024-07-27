@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const connectToDB = require('../Server/config/db'); 
-const {CatModel, CatMutton, CatParty, CatOffer, CatSeafood} =require("../Server/models/user")
+const {CatModel, CatMutton, CatParty, CatOffer, CatSeafood,CatReady,CatSnack,CatCold,CatEgg,CatPickel,CatSpice,CatDryfish} =require("../Server/models/user")
 require('dotenv').config();
 
 const port = process.env.PUBLIC_PORT || 3000;
@@ -99,11 +99,12 @@ app.get('/', (req, res) => {
       console.error("error",error);
     }
   })
-  app.get("/getSign",async(req,res)=>{
+
+  app.get("/getReady",async(req,res)=>{
     try{
-      let data=await Signup.find({});
+      let data=await CatReady.find({});
       if(data.length==0){
-        return res.status(404).send({error:"No data found"});
+        return res.status(404).send({error:"no data found"});
       }
       res.send(data);
     }
@@ -111,6 +112,76 @@ app.get('/', (req, res) => {
       console.error("error",error);
     }
   })
+
+  app.get("/getSnack",async(req,res)=>{
+    try{
+      let data=await CatSnack.find({});
+      if(data.length==0){
+        return res.status(404).send({error:"no data found"});
+      }
+      res.send(data);
+    }
+    catch(error){
+      console.error("error",error);
+    }
+  })
+
+  app.get("/getCold",async(req,res)=>{
+    try{
+      let data= await CatCold.find({});
+      if(data.length==0){
+        return res.status(404).send({error: "no data found"});
+      }
+      res.send(data);
+    }
+    catch(error){
+      console.error("error",error);
+    }
+  })
+
+  app.get("/getEgg",async(req,res)=>{
+    try{
+      let data= await CatEgg.find({});
+      if(data.length==0){
+        return res.status(404).send({error:"no data found"});
+      }
+      res.send(data);
+    }
+    catch(error){
+      console.error("error",error);
+    }
+  })
+  app.get("/getPickel",async(req,res)=>{
+    try{
+      let data= await CatPickel.find({});
+      if(data.length==0){
+        return res.status(404).send({error:"no data found"});
+      }
+      res.send(data);
+    }
+    catch(error){
+      console.error("error",error);
+    }
+  })
+  app.get("/getSpice",async(req,res)=>{
+    try{
+      let data= await CatSpice.find({});
+      if(data.length==0){
+        return res.status(404).send({error:"no data found"});
+      }
+      res.send(data);
+    }
+    catch(error){
+      console.error("error",error);
+    }
+  })
+
+  app.get("/getDryfish",async(req,res)=>{
+    try{
+      let data= await CatDryfish.find({});
+      if(data.length==0){
+        return res.status(404).send({error:"no data found"});
+
 
     connectToDB();
 // I am raising a pr for my "Database read and write performed" which is a redo assingment as I got a review that "The PR does NOT fully meet the purpose as it only partially implements the required database call in the API route."
