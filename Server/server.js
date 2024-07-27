@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const connectToDB = require('../Server/config/db'); 
-const {CatModel, CatMutton, CatParty, CatOffer, CatSeafood} =require("../Server/models/user")
+const {CatModel, CatMutton, CatParty, CatOffer, CatSeafood, Signup} =require("../Server/models/user")
 require('dotenv').config();
 
 const port = process.env.PUBLIC_PORT || 3000;
@@ -91,6 +91,19 @@ app.get('/', (req, res) => {
       let data=await CatSeafood.find({});
       if(data.lenght==0){
         return res.status(404).send({error: "No data found"});
+      }
+      res.send(data);
+    }
+    catch(error){
+      console.error("error",error);
+    }
+  })
+
+  app.get("/getSign",async(req,res)=>{
+    try{
+      let data=await Signup.find({});
+      if(data.length==0){
+        return res.status(404).send({error:"No data found"});
       }
       res.send(data);
     }
