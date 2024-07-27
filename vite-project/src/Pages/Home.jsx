@@ -105,19 +105,19 @@ function Home() {
               <font className="Fname">Sea Food</font>
             </div>
           </Link>
-          <Link className="link" to='/Item'>
+          <Link className="link" to='/Ready'>
             <div className="item">
               <img className="image" src={ready} alt="!" />
               <font className="Fname">Ready To Cook</font>
             </div>
           </Link>
-          <Link className="link" to='/Item'>
+          <Link className="link" to='/Snack'>
             <div className="item">
               <img className="image" src={snack} alt="!" />
               <font className="Fname">Snacks</font>
             </div>
           </Link>
-          <Link className="link" to='/Item'>
+          <Link className="link" to='/Cold'>
             <div className="item">
               <img className="image" src={cold} alt="!" />
               <font className="Fname">Cold Cuts</font>
@@ -125,25 +125,25 @@ function Home() {
           </Link>
         </div>
         <div className="container">
-          <Link className="link" to='/Item'>
+          <Link className="link" to='/Egg'>
             <div className="item">
               <img className="image" src={egg} alt="!" />
               <font className="Fname">Eggs</font>
             </div>
           </Link>
-          <Link className="link" to='/Item'>
+          <Link className="link" to='/Pickel'>
             <div className="item">
               <img className="image" src={pickel} alt="!" />
               <font className="Fname">Pickles</font>
             </div>
           </Link>
-          <Link className="link" to='/Item'>
+          <Link className="link" to='/Spice'>
             <div className="item">
               <img className="image" src={spice} alt="!" />
               <font className="Fname">Spices</font>
             </div>
           </Link>
-          <Link className="link" to='/Item'>
+          <Link className="link" to='/Dryfish'>
             <div className="item">
               <img className="image" src={dry} alt="!" />
               <font className="Fname">Dry Fish</font>

@@ -8,6 +8,13 @@ import Home from './Pages/Home';
 import Party from './FOOD/Party';
 import Offer from './FOOD/Offer';
 import Seafood from './FOOD/Seafood';
+import Ready from './FOOD/Ready';
+import Snack from './FOOD/Snack';
+import Cold from "./FOOD/Cold";
+import Egg from "./FOOD/Egg";
+import Pickel from "./FOOD/Pickel";
+import Spice from './FOOD/Spice';
+import Dryfish from './FOOD/Dryfish';
 
 function App() {
   return (
@@ -20,6 +27,13 @@ function App() {
         <Route path='/Party' element={<Party/>}></Route>
         <Route path='/Offer' element={<Offer/>}></Route>
         <Route path='/Seafood' element={<Seafood/>}></Route>
+        <Route path='/Ready' element={<Ready/>}></Route>
+        <Route path='/Snack' element={<Snack/>}></Route>
+        <Route path='"/Cold' element={<Cold/>}></Route>
+        <Route path='"/Egg' element={<Egg/>}></Route>
+        <Route path='"/Pickel' element={<Pickel/>}></Route>
+        <Route path='"/Spice' element={<Spice/>}></Route>
+        <Route path='"/Dryfish' element={<Dryfish/>}></Route>
       </Routes>
      </BrowserRouter>
     </>
