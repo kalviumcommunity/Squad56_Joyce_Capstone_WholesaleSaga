@@ -108,7 +108,7 @@ const CatCold = mongoose.model("cold_cuts",ColdcutSchema)
 const CatEgg = mongoose.model("eggs",EggSchema)
 const CatPickel = mongoose.model("pickels",PickelSchema)
 const CatSpice = mongoose.model("spices",SpiceSchema)
-const CatDryfish = mongoose.model("dry_fishs",DryfishSchema)
+const CatDryfish = mongoose.model("dry_fishes",DryfishSchema)
 module.exports = {CatModel,CatMutton,CatParty,CatOffer,CatSeafood,CatReady,CatSnack,CatCold,CatEgg,CatPickel,CatSpice,CatDryfish}
 
 // module.exports= CatModel
