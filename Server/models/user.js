@@ -43,7 +43,11 @@ const SeafoodSchema = new mongoose.Schema({
     serve:String,
     price:String
 })
-
+const SignupSchema = new mongoose.Schema({
+    username:String,
+    password:String,
+    mobileNo:String
+})
 
 
 
@@ -54,7 +58,7 @@ const CatParty =mongoose.model("parties",PartySchema)
 const CatOffer =mongoose.model("offers",OfferSchema)
 const CatSeafood =mongoose.model("sea_foods",SeafoodSchema)
 const Signup=mongoose.model("signup",SignupSchema)
-module.exports = {CatModel,CatMutton,CatParty,CatOffer,CatSeafood}
+module.exports = {CatModel,CatMutton,CatParty,CatOffer,CatSeafood,Signup}
 
 // module.exports= CatModel
 // I am raising a pr for my "Database schema created" which is a redo assingment as The added lines in the code did not include the implementation of creating Mongoose models along with schema.

@@ -99,7 +99,18 @@ app.get('/', (req, res) => {
       console.error("error",error);
     }
   })
-
+  app.get("/getSign",async(req,res)=>{
+    try{
+      let data=await Signup.find({});
+      if(data.length==0){
+        return res.status(404).send({error:"No data found"});
+      }
+      res.send(data);
+    }
+    catch(error){
+      console.error("error",error);
+    }
+  })
 
     connectToDB();
 // I am raising a pr for my "Database read and write performed" which is a redo assingment as I got a review that "The PR does NOT fully meet the purpose as it only partially implements the required database call in the API route."
