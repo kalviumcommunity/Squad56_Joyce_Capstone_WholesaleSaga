@@ -86,7 +86,7 @@ app.get('/', (req, res) => {
     }
   })
 
-  app.get("/getSeadfood",async(rq,res)=>{
+  app.get("/getSeadfood",async(req,res)=>{
     try{
       let data=await CatSeafood.find({});
       if(data.lenght==0){
