@@ -21,7 +21,7 @@ function Dryfish(){
       <Navbar/>
         <div className="catName">DRY FISH</div>
         <div className="catContainer">
-            {item.map(user=>(<div className="catItem" key={user.id}>
+            {item.map(user=>(<div className="catItem" key={user._id}>
                     <img className="catImage" src={user.img} alt="!" />
                     <font className="catFname">{user.name}</font>
                     <font className="catWeight">{user.weight}</font>

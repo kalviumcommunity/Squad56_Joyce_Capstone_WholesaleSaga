@@ -8,7 +8,7 @@ import plus from "../assets/plus.png";
 function Snack(){
     const [item,setItem]=useState([]);
     useEffect(()=>{
-        axios.get('https://squad56-joyce-capstone-wholesalesaga-1.onrender.com/getSnack')
+        axios.get('https://localhost:3201/getSnack')
         .then(response=>{
             setItem(response.data);
         })
@@ -21,7 +21,7 @@ function Snack(){
         <Navbar/>
         <div className="catName">SNACK</div>
         <div className="catContainer">
-            {item.map(user=>(<div className="catItem" key={user.id}>
+            {item.map(user=>(<div className="catItem" key={user._id}>
                     <img className="catImage" src={user.img} alt="!" />
                     <font className="catFname">{user.name}</font>
                     <font className="catWeight">{user.weight}</font>
