@@ -99,7 +99,7 @@ function Home() {
           </Link>
         </div>
         <div className="container">
-          <Link className="link" to='/Item'>
+          <Link className="link" to='/Seafood'>
             <div className="item">
               <img className="image" src={fish} alt="!" />
               <font className="Fname">Sea Food</font>

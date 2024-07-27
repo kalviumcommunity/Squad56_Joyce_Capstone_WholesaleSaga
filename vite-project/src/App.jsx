@@ -7,6 +7,7 @@ import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Home from './Pages/Home';
 import Party from './FOOD/Party';
 import Offer from './FOOD/Offer';
+import Seafood from './FOOD/Seafood';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/Mutton' element={<Mutton/>}></Route>
         <Route path='/Party' element={<Party/>}></Route>
         <Route path='/Offer' element={<Offer/>}></Route>
+        <Route path='/Seafood' element={<Seafood/>}></Route>
       </Routes>
      </BrowserRouter>
     </>
