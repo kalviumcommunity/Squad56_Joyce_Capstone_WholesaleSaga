@@ -47,6 +47,7 @@ app.get('/', (req, res) => {
   });
 
 
+
   app.get("/getMut",async(req,res)=>{
     try{
       let data=await CatMutton.find({});
@@ -180,13 +181,7 @@ app.get('/', (req, res) => {
       let data= await CatDryfish.find({});
       if(data.length==0){
         return res.status(404).send({error:"no data found"});
-      }
-      res.send(data);
-    }
-    catch(error){
-      console.error("error",error);
-    }
-  })
+
 
     connectToDB();
 // I am raising a pr for my "Database read and write performed" which is a redo assingment as I got a review that "The PR does NOT fully meet the purpose as it only partially implements the required database call in the API route."
