@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 //     img:String,
 //     category:String
 // })
+const bcrypt = require('bcryptjs');
 
 const CatSchema = new mongoose.Schema({
     img:String,
@@ -95,6 +96,19 @@ const DryfishSchema= new mongoose.Schema({
     serve:String,
     price:String
 })
+const SignUpSchema = new mongoose.Schema({
+    username: String,
+    password: String,
+    mobileNo: String
+});
+
+SignUpSchema.pre('save', async function (next) {
+    if (this.isModified('password') || this.isNew) {
+        this.password = await bcrypt.hash(this.password, 10);
+    }
+    next();
+});
+
 
 // const HomeModel =mongoose.model("whole_sagas",HomeSchema)
 const CatModel =mongoose.model("chickens",CatSchema)
@@ -109,7 +123,8 @@ const CatEgg = mongoose.model("eggs",EggSchema)
 const CatPickel = mongoose.model("pickels",PickelSchema)
 const CatSpice = mongoose.model("spices",SpiceSchema)
 const CatDryfish = mongoose.model("dry_fishes",DryfishSchema)
-module.exports = {CatModel,CatMutton,CatParty,CatOffer,CatSeafood,CatReady,CatSnack,CatCold,CatEgg,CatPickel,CatSpice,CatDryfish}
+const SignUpModel = mongoose.model("signups",SignUpSchema)
+module.exports = {CatModel,CatMutton,CatParty,CatOffer,CatSeafood,CatReady,CatSnack,CatCold,CatEgg,CatPickel,CatSpice,CatDryfish,SignUpModel}
 
 
 // module.exports= CatModel
