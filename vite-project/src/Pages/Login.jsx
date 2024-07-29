@@ -38,7 +38,7 @@ function Login({ closeLogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3201/api/auth/login', {
+      const response = await fetch('https://squad56-joyce-capstone-wholesalesaga-1.onrender.com/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -50,6 +50,7 @@ function Login({ closeLogin }) {
       console.log('Response text:', responseText);
   
       if (response.ok) {
+        document.cookie = `username=${loginData.username}; path=/;`;
         alert('Login successful');
         closeLogin();
       } else {
@@ -65,7 +66,6 @@ function Login({ closeLogin }) {
       alert('Error logging in');
     }
   };
-  
 
   return (
     <>

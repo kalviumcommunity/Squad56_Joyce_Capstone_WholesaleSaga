@@ -18,7 +18,7 @@ function Signup({ closeSignup }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3201/signup', {
+      const response = await fetch('https://squad56-joyce-capstone-wholesalesaga-1.onrender.com/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
