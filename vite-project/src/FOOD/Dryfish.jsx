@@ -9,7 +9,7 @@ function Dryfish() {
     const [item, setItem] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3201/getDryfish')
+        axios.get('https://squad56-joyce-capstone-wholesalesaga-1.onrender.com/getDryfish')
             .then(response => {
                 console.log("Data fetched:", response.data); // Debugging line
                 setItem(response.data);
@@ -18,6 +18,13 @@ function Dryfish() {
                 console.log("Error fetching data:", error); // Debugging line
             });
     }, []);
+
+    const handleAddToCart = (selectedItem) => {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(selectedItem);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert(`${selectedItem.name} has been added to the cart`);
+    };
 
     return (
         <>
@@ -31,7 +38,7 @@ function Dryfish() {
                         <font className="catWeight">{user.weight}</font>
                         <font className="catPieces">{user.serve}</font>
                         <font className="catPrice">{user.price}</font>
-                        <button className="Badd">
+                        <button className="Badd" onClick={() => handleAddToCart(user)}>
                             <img className="add" src={plus} alt="Add" />
                         </button>
                     </div>

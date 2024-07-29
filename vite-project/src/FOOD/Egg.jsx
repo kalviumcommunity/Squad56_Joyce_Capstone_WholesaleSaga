@@ -19,6 +19,13 @@ function Egg() {
             });
     }, []);
 
+    const handleAddToCart = (selectedItem) => {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(selectedItem);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert(`${selectedItem.name} has been added to the cart`);
+    };
+
     return (
         <>
             <Navbar />
@@ -31,7 +38,7 @@ function Egg() {
                         <font className="catWeight">{user.weight}</font>
                         <font className="catPieces">{user.serve}</font>
                         <font className="catPrice">{user.price}</font>
-                        <button className="Badd">
+                        <button className="Badd" onClick={() => handleAddToCart(user)}>
                             <img className="add" src={plus} alt="Add" />
                         </button>
                     </div>

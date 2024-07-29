@@ -64,6 +64,7 @@ input:focus{
     position: absolute;
     margin-left: 930px;
     margin-top: 4px;
+    cursor: pointer;
 }
 .Cart{
     color: white;
@@ -71,6 +72,7 @@ input:focus{
     font-size: 20px;
     position: absolute;
     margin-top: 12px;
+    cursor: pointer;
 }
 .login{
     color: white;
@@ -78,6 +80,7 @@ input:focus{
     margin-left: 1065px;
     margin-top: 7px;
     position: absolute;
+    cursor: pointer;
 }
 .caro{
     width: 1439px;

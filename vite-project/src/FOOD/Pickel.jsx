@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./Item.css";
+import "./Item.css"; // Assuming the styling is shared
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import plus from "../assets/plus.png";
@@ -9,7 +9,7 @@ function Pickel() {
     const [item, setItem] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3201/getPickel')
+        axios.get('https://squad56-joyce-capstone-wholesalesaga-1.onrender.com/getPickel')
             .then(response => {
                 console.log("Data fetched:", response.data); // Debugging line
                 setItem(response.data);
@@ -19,10 +19,17 @@ function Pickel() {
             });
     }, []);
 
+    const handleAddToCart = (selectedItem) => {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(selectedItem);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert(`${selectedItem.name} has been added to the cart`);
+    };
+
     return (
         <>
             <Navbar />
-            <div className="catName">PICKEL</div>
+            <div className="catName">PICKLE</div>
             <div className="catContainer">
                 {item.map(user => (
                     <div className="catItem" key={user.id}>
@@ -31,7 +38,7 @@ function Pickel() {
                         <font className="catWeight">{user.weight}</font>
                         <font className="catPieces">{user.serve}</font>
                         <font className="catPrice">{user.price}</font>
-                        <button className="Badd">
+                        <button className="Badd" onClick={() => handleAddToCart(user)}>
                             <img className="add" src={plus} alt="Add" />
                         </button>
                     </div>

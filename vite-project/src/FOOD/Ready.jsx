@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./Item.css";
+import "./Item.css"; // Assuming styles are the same for Item and Ready
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import plus from "../assets/plus.png";
@@ -9,7 +9,7 @@ function Ready() {
     const [item, setItem] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3201/getReady')
+        axios.get('https://squad56-joyce-capstone-wholesalesaga-1.onrender.com/getReady')
             .then(response => {
                 console.log("Data fetched:", response.data); // Debugging line
                 setItem(response.data);
@@ -18,6 +18,13 @@ function Ready() {
                 console.log("Error fetching data:", error); // Debugging line
             });
     }, []);
+
+    const handleAddToCart = (selectedItem) => {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(selectedItem);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert(`${selectedItem.name} has been added to the cart`);
+    };
 
     return (
         <>
@@ -31,7 +38,7 @@ function Ready() {
                         <font className="catWeight">{user.weight}</font>
                         <font className="catPieces">{user.serve}</font>
                         <font className="catPrice">{user.price}</font>
-                        <button className="Badd">
+                        <button className="Badd" onClick={() => handleAddToCart(user)}>
                             <img className="add" src={plus} alt="Add" />
                         </button>
                     </div>
