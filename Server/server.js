@@ -190,8 +190,6 @@ app.post('/signup', async (req, res) => {
 
 app.post('/api/auth/login', async (req, res) => {
     const { username, mobile } = req.body;
-  
-    // Replace with actual authentication logic
     if (username && mobile) {
       res.status(200).json({ message: 'Login successful' });
     } else {
